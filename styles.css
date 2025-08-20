@@ -1,0 +1,163 @@
+/* Custom CSS for your portfolio */
+
+/* Applying a dark background to the whole page */
+body {
+    background-color: #000000; /* Pure black background to match the image */
+    color: #ffffff; /* Sets the default text color for the page to white */
+}
+
+/* --- Navbar Styles --- */
+.navbar {
+    /* We use !important to make sure our style overrides Bootstrap's default */
+    background-color: #272727 ;
+    border-top-left-radius: 0 ;
+    border-top-right-radius: 0 ;
+    border-bottom-left-radius: 1rem ;
+    border-bottom-right-radius: 1rem ;
+}
+
+.navbar .navbar-brand {
+    color: #ffffff; /* Make the logo text white */
+    font-weight: bold;
+}
+
+
+.navbar .nav-link {
+    font-family: monospace;
+}
+/* Change link color on hover for a nice effect */
+nav.navbar .nav-link:hover {
+    color: #ffffff !important;
+}
+
+.glow-btn {
+    width: 20rem;
+    font-family: monospace;
+    border-color: #5cf50a;
+    background-color: #3eb300; 
+    box-shadow: 0 0 15px rgba(62, 179, 0, 0.7);
+  }
+  
+  .glow-btn:hover {
+    background-color: #5cf50a; 
+    box-shadow: 0 0 25px rgba(62, 179, 0, 0.9);
+  }
+  .lbl{
+    font-family: monospace;
+  }
+    .tapp{
+        transition: all 0.3s ease-in-out;
+    }
+  .tapp:hover{
+    background-color: #272727;
+    color: #ffffff !important;
+  }
+
+
+  .testimonial-card {
+
+    position: relative; 
+    padding: 20px;
+    &::before{
+content: "";
+position: absolute;
+inset: 0;
+border-radius: 1em;
+border: 0.1em solid transparent;
+background: linear-gradient(90deg,#272727,black) border-box;
+mask: linear-gradient(black 0 0) padding-box, linear-gradient(black 0 0);
+mask-composite:  exclude;
+
+    }
+  
+  }
+  
+  /* Style for the large quote mark */
+  .testimonial-card .quote-mark {
+    position: absolute;
+    top: -0.8rem;     
+    left: 2.5rem;     
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #ffffff;
+  }
+
+  .testimonial-card p {
+    color: #ffffff;
+    font-family: monospace; 
+    flex-grow: 1; 
+    margin-top: 1rem; /* Creates space below the absolute positioned quote */
+    padding-top: 0;
+  }
+
+  /* Container for the client's image and name */
+  .testimonial-card .client-info {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem; 
+  }
+
+  .testimonial-card .client-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    object-fit: cover; 
+  }
+
+  .testimonial-card .client-info h5 {
+    margin-left: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: monospace;
+  }
+
+  /* --- Recent Work Section --- */
+  .btn-success-custom {
+    background-color: #198754; /* Bootstrap success green */
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+  }
+
+  .btn-success-custom:hover {
+    background-color: #157347;
+    color: white;
+  }
+
+  #recentWorkCarousel .carousel-control-prev,
+  #recentWorkCarousel .carousel-control-next {
+      width: 3rem;
+      height: 3rem;
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: 50%;
+      opacity: 1;
+      top: 40%;
+      transform: translateY(-50%);
+  }
+
+  #recentWorkCarousel .carousel-control-prev {
+      left: -4rem;
+  }
+
+  #recentWorkCarousel .carousel-control-next {
+      right: -4rem;
+  }
+
+  #recentWorkCarousel .carousel-control-prev-icon,
+  #recentWorkCarousel .carousel-control-next-icon {
+      background-image: none; /* Remove default Bootstrap icon */
+      font-size: 1.5rem;
+      color: #000;
+      line-height: 1;
+  }
+
+  #recentWorkCarousel .carousel-control-prev-icon::before {
+      content: '<';
+  }
+
+  #recentWorkCarousel .carousel-control-next-icon::before {
+      content: '>';
+  }
